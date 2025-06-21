@@ -1,3 +1,4 @@
+// "use client";
 import React from "react";
 import { FormElement } from "./FormElements";
 import { Button } from "./ui/button";
@@ -24,7 +25,7 @@ function SidebarBtnElement({ formElement }: { formElement: FormElement }) {
       {...dragable.listeners}
       {...dragable.attributes}
     >
-      <Icon classname="h-8 w-8 text-primary cursor-grab" />
+      <Icon className="h-8 w-8 text-primary cursor-grab" />
       <p className="text-xs">{label}</p>
       {/* {dragable.isDragging ? "draging" : "not draging"} */}
     </Button>
@@ -43,7 +44,7 @@ export function SidebarBtnElementDragOverlay({
       variant={"outline"}
       className="flex flex-col gap-2 h-[120px] w-[120px] cursor-grab "
     >
-      <Icon classname="h-8 w-8 text-primary cursor-grab" />
+      <Icon className="h-8 w-8 text-primary cursor-grab" />
       <p className="text-xs">{label}</p>
     </Button>
   );
