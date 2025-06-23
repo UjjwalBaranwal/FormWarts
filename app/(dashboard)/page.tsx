@@ -108,7 +108,7 @@ function StatsCards({ loading, data }: StatsCardsProps) {
     </div>
   );
 }
-function StatsCard({
+export function StatsCard({
   title,
   value,
   icon,
