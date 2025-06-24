@@ -3,7 +3,7 @@ import FormSubmit from "@/components/FormSubmit";
 import React from "react";
 
 async function SubmitPage({ params }: { params: { formUrl: string } }) {
-  const { formUrl } = await params;
+  const { formUrl } = params;
   const form = await GetFormContentByUrl(formUrl);
   if (!form) throw new Error("Form not found");
   const formContent = JSON.parse(form.content);
