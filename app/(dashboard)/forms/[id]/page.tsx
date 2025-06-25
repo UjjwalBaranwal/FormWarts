@@ -21,7 +21,7 @@ import {
 import { format, formatDistance } from "date-fns";
 import { Checkbox } from "@/components/ui/checkbox";
 
-async function FormDetailPage({ params }: { params: { id: string } }) {
+async function FormDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const form = await GetFormById(Number(id));
   if (!form) {
