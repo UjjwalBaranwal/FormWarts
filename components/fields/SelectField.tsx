@@ -53,7 +53,7 @@ const propertiesSchema = z.object({
   helperText: z.string().max(200),
   required: z.boolean(),
   placeHolder: z.string().max(50),
-  options: z.array(z.string()).default([]),
+  options: z.array(z.string()),
 });
 
 export const SelectFieldFormElement: FormElement = {
