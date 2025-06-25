@@ -51,7 +51,7 @@ const extraAttributes = {
 const propertiesSchema = z.object({
   label: z.string().min(2).max(50),
   helperText: z.string().max(200),
-  required: z.boolean().default(false),
+  required: z.boolean(),
   placeHolder: z.string().max(50),
   options: z.array(z.string()).default([]),
 });
