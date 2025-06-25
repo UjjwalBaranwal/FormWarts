@@ -19,14 +19,7 @@ function FormSubmit({
   const [renderKey, setRenderKey] = useState(new Date().getTime());
   const [pending, startTransition] = useTransition();
   const [submitted, setSubmitted] = useState(false);
-  //   const setFieldError = (id: string, error: boolean) => {
-  //     if (error) {
-  //       formErrors.current[id] = true;
-  //     } else {
-  //       delete formErrors.current[id];
-  //     }
-  //     setRenderKey(new Date().getTime()); // ⚠️ force re-render to reflect error state
-  //   };
+
   const validateForm: () => boolean = useCallback(() => {
     for (const field of content) {
       const actualValue = formValues.current[field.id] || "";
@@ -90,7 +83,6 @@ function FormSubmit({
               elementInstance={element}
               submitValue={submitValue}
               isInvalid={formErrors.current[element.id]}
-              //   setFieldError={setFieldError}
               defaultValue={formValues.current[element.id]}
             />
           );
